@@ -4,9 +4,11 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var boxGroup;
+var backgroundImg;
 
 function preload() {
 //preload the images here
+backgroundImg = loadImage("images/GamingBackground.png");
 
 }
 
@@ -47,7 +49,7 @@ function setup() {
 }
 
 function draw() {
-  background(255,255,255);
+  background(backgroundImg);
   Engine.update(engine);
 
   ground.display();
